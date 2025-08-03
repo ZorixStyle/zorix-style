@@ -108,8 +108,8 @@ let products = [
     description: "Statement tee with ZORIX skull design."
   },
   {
-    image: "images/tshirt3.jpg",
-    name: "Clean Black Tee",
+  image: "assets/images/tshirt3.jpg",
+  name: "Clean Black Tee",
     price: "₹899",
       description: `Premium black round neck T-shirt featuring an eye-catching cartoon prisoner design with height chart backdrop.<br>
 Crafted using soft & breathable 100% cotton fabric for superior comfort and durability.<br>
@@ -394,11 +394,11 @@ function sendFinalOrder() {
     return;
   }
 
-  let message = `Hey, I want to order from ZORIX STYLE:\n\n`;
+  let message = `🛒 ZORIX STYLE - Order Confirmation\n\n`;
   let total = 0;
 
   if (selectedSingleProduct) {
-    message += `1. ${selectedSingleProduct.name} - ${selectedSingleProduct.price} (Size: ${size})\n`;
+    message += `👕 Product:\n• ${selectedSingleProduct.name}\n📏 Size: ${size}\n💵 Price: ${selectedSingleProduct.price}\n\n`;
     total = parseInt(selectedSingleProduct.price.replace(/[₹,]/g, ""));
   } else {
     const cart = getCart();
@@ -407,13 +407,20 @@ function sendFinalOrder() {
       return;
     }
 
+    message += `🛍️ Products:\n`;
     cart.forEach((item, index) => {
-      message += `${index + 1}. ${item.name} - ₹${item.price} (Size: ${size})\n`;
+      const subtotal = item.qty * item.price;
+      message += `${index + 1}. ${item.name} x${item.qty} = ₹${subtotal} (Size: ${size})\n`;
     });
-    total = cart.reduce((sum, item) => sum + item.price, 0);
+    total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+    message += `\n`;
   }
 
-  message += `\nTotal: ₹${total}\nSize: ${size}\nPayment: ${payment}\nAddress:\n${address}`;
+  message += `📦 Order Summary:\n`;
+  message += `Total Amount: ₹${total}\n`;
+  message += `Payment Method: ${payment === "COD" ? "Cash on Delivery (COD)" : payment}\n\n`;
+  message += `📍 Shipping Address:\n${address}\n\n`;
+  message += `🧾 Please confirm if all details are correct!`;
 
   const encoded = encodeURIComponent(message);
   const number = "918512041984";
@@ -424,6 +431,7 @@ function sendFinalOrder() {
   closeOrderModal();
   selectedSingleProduct = null;
 }
+
 
 function openSingleProductOrderModal() {
   selectedSingleProduct = modalProduct;
@@ -446,6 +454,10 @@ function openSingleProductOrderModal() {
 function openSingleProductOrderModalFromCard(name, price) {
   selectedSingleProduct = { name: name, price: `₹${price}` };
   document.getElementById("orderModal").style.display = "flex";
+
+  // Reset or pre-select size dropdown
+  const sizeDropdown = document.getElementById("productSize");
+  sizeDropdown.value = ""; // or default value
 }
 
 function showToast() {
