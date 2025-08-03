@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZORIX STYLE | Bold Streetwear T-Shirts for Men</title>
+  <meta name="description" content="ZORIX STYLE brings bold, KATON, and affordable streetwear T-shirts for men. Shop high-quality designs with fast ordering via WhatsApp." />
+  <meta name="keywords" content="zorix style, men's t-shirts, streetwear, bold fashion, affordable t-shirts, graphic tees, printed tees, Indian fashion" />
+  <meta name="author" content="ZORIX STYLE" />
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="ZORIX STYLE | Bold Streetwear T-Shirts" />
+  <meta property="og:description" content="Shop bold and affordable streetwear T-shirts for men. Order directly via WhatsApp from ZORIX STYLE." />
+  <meta property="og:image" content="https://yourdomain.com/assets/images/banner.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  
+  <!-- Google Font (already there, optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- CSS Link (keep as-is if already present) -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+</head>
+
+<body>
+
+  <!-- ✅ Navbar -->
+<header class="navbar">
+  <div class="logo">ZORIX STYLE</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+<a href="javascript:void(0)" onclick="toggleCart()">Cart (<span id="cartCount">0</span>)</a>
+
+  </nav>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+  <!-- ✅ Hero Section -->
+  <section class="hero reveal"> 
+    <div class="hero-text">
+      <h1>Define Your Look with ZORIX</h1>
+      <p>Premium T-Shirts Crafted for the Modern Man</p>
+      <a href="#shop" class="btn-shop">Shop Now</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/images/hero-shirt.png" alt="ZORIX Premium Tee" />
+    </div>
+  </section>
+
+  <!-- ✅ Product Section -->
+
+<!-- ⏰ Offer Timer -->
+<div class="offer-timer">
+  <span class="timer-icon">⏰</span>
+  <span class="timer-text">
+   50% OFF | Offer ends in: <span id="countdown">02:00:00</span>
+  </span>
+</div>
+
+<h2>Trending T-Shirts</h2>
+
+<div class="product-grid reveal">
+
+<div class="product-card">
+        <img src="assets/images/tshirt1.jpg" alt="KATON Black Tee">
+        <h3>KATON Black Tee</h3>
+        <div class="price-tag">
+          <span class="old-price">₹599</span>
+          <span class="new-price">₹299</span>
+          <span class="discount">50% OFF</span>
+        </div>
+        <button class="whatsapp-btn" onclick="openSingleProductOrderModalFromCard('KATON Black Tee', 299)">Order on WhatsApp</button>
+        <button onclick="addToCart('KATON Black Tee', 299)">Add to Cart</button>
+      </div>
+      <!-- More products can be added here -->
+    </div>
+    <section>
+
+  <!-- ✅ Features Section -->
+  <section class="features reveal">   
+     <h2>Why ZORIX?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">🔥 Premium Fabric</div>
+      <div class="feature-card">🧵 Bold Cuts</div>
+      <div class="feature-card">🚚 Free Shipping</div>
+      <div class="feature-card">💳 COD Available</div>
+    </div>
+  </section>
+
+  <!-- ✅ Brand Story -->
+  <section class="brand-story reveal">    
+    <h2>Our Story</h2>
+    <p>ZORIX STYLE was born to bring KATON, bold and affordable fashion to men who lead from the front.</p>
+    <img src="assets/images/story.jpg" alt="ZORIX Story">
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 ZORIX
+    CLOTHING. All Rights Reserved.</p>
+  </footer>
+
+<section class="product-section">
+  <h2>Shop ZORIX Categories</h2>
+<div class="product-grid reveal">
+
+    <!-- Category: MOGGE Cartoon Tee -->
+<div class="product-card" onclick='showProductDetails({
+  image: "assets/images/tshirt2.jpg",
+  name: "MOGGE Cartoon Tee",
+  price: "299",
+  description: `Vibrant mustard yellow T-shirt with a quirky cartoon graphic inspired by playful street style.<br>
+Features bold “MOGGE” branding and eye-catching character print for a unique, head-turning look.<br>
+Made with premium, breathable 100% cotton fabric offering soft feel and lasting comfort.<br>
+Perfect for teens, college wear, and anyone who loves a fun, standout casual outfit.<br>
+✔️ High-definition, fade-resistant print<br>
+✔️ Relaxed unisex fit<br>
+✔️ Durable double-stitched seams<br>
+✔️ Easy-care machine washable<br>
+Made in India 🇮🇳`
+})'>
+  <img src="assets/images/tshirt2.jpg" alt="MOGGE Cartoon Tee" />
+  <h3>MOGGE Cartoon Tee</h3>
+  <div class="price-tag">
+    <span class="old-price">₹599</span>
+    <span class="new-price">₹299</span>
+    <span class="discount">50% OFF</span>
+  </div>
+  <button onclick="event.stopPropagation(); addToCart('MOGGE Cartoon Tee', 299)">Add to Cart</button>
+  <button class="whatsapp-btn" onclick="event.stopPropagation(); openSingleProductOrderModal()">Order on WhatsApp</button>
+</div>
+
+
+    <!-- Category: Urban Burst Tee -->
+    <div class="product-card" onclick='showProductDetails({
+      image: "assets/images/tshirt1.jpg",
+      name: "KATON Black Tee",
+      price: "299",
+        description: `Premium black round neck T-shirt featuring an eye-catching cartoon prisoner design with height chart backdrop.<br>
+Crafted using soft & breathable 100% cotton fabric for superior comfort and durability.<br>
+Ideal for casual streetwear, college fashion, or weekend hangouts.<br>
+High-definition graphic print with lasting color – won’t fade or crack after washes.<br>
+✔️ Relaxed unisex fit<br>
+✔️ Double-stitched hems for long-lasting wear<br>
+✔️ Skin-friendly & sweat-absorbent<br>
+✔️ Machine washable<br>
+Made in India 🇮🇳`
+    })'>
+      <img src="assets/images/tshirt1.jpg" alt="KATON Black Tee" />
+      <h3>KATON Black Tee</h3>
+      <div class="price-tag">
+        <span class="old-price">₹599</span>
+        <span class="new-price">₹299</span>
+        <span class="discount">50% OFF</span>
+      </div>
+      <button onclick="event.stopPropagation(); addToCart('KATON Black Tee', 299)">Add to Cart</button>
+      <button class="whatsapp-btn" onclick="event.stopPropagation(); openSingleProductOrderModal()">Order on WhatsApp</button>
+    </div>
+
+    <div class="product-card" onclick='showProductDetails({
+      image: "assets/images/tshirt3.jpg",
+      name: "Urban Burst Tee",
+      price: "299",
+      description: `Premium bright green streetwear T-shirt with bold abstract yellow & black typography print on the back.<br>
+Unique Berlin-inspired design featuring quirky words for a fresh urban vibe.<br>
+Made from soft, breathable 100% cotton fabric for day-long comfort and durability.<br>
+Perfect for those who love standout street fashion and artistic graphics.<br>
+✔️ Eye-catching high-quality print<br>
+✔️ Relaxed unisex fit<br>
+✔️ Double-stitched for extra strength<br>
+✔️ Machine washable & colorfast<br>
+Made in India 🇮🇳`
+})'>
+      <img src="assets/images/tshirt3.jpg" alt="Urban Burst Tee" />
+      <h3>Urban Burst Tee</h3>
+      <div class="price-tag">
+        <span class="old-price">₹599</span>
+        <span class="new-price">₹299</span>
+        <span class="discount">50% OFF</span>
+      </div>
+      <button onclick="event.stopPropagation(); addToCart('Urban Burst Tee', 299)">Add to Cart</button>
+      <button class="whatsapp-btn" onclick="event.stopPropagation(); openSingleProductOrderModal()">Order on WhatsApp</button>
+    </div>
+
+<!-- Category: ZOGAN Abstract Tee -->
+<div class="product-card" onclick="showProductDetails({
+  image: 'assets/images/tshirt4.jpg',
+  name: 'ZOGAN Abstract Tee',
+  price: 299,
+  description: `Elegant light beige T-shirt featuring a modern abstract art print in bold red & blue geometric shapes.<br>
+Highlights motivational text “Resolute & Confident – Things will work out” for an inspiring, positive vibe.<br>
+Crafted from premium-quality, breathable 100% cotton fabric ensuring superior softness and all-day comfort.<br>
+Perfect for minimalist streetwear lovers who appreciate unique, artistic designs.<br>
+✔️ High-definition fade-resistant print<br>
+✔️ Relaxed unisex fit for versatile styling<br>
+✔️ Double-stitched for enhanced durability<br>
+✔️ Easy to wash & maintain<br>
+Made in India 🇮🇳`
+})">
+
+  <img src="assets/images/tshirt4.jpg" alt="ZOGAN Abstract Tee" />
+  <h3>ZOGAN Abstract Tee</h3>
+  <div class="price-tag">
+    <span class="old-price">₹599</span>
+    <span class="new-price">₹299</span>
+    <span class="discount">50% OFF</span>
+  </div>
+  <button onclick="event.stopPropagation(); addToCart('ZOGAN Abstract Tee', 299)">Add to Cart</button>
+  <button class="whatsapp-btn" onclick="event.stopPropagation(); openSingleProductOrderModal()">Order on WhatsApp</button>
+</div>
+
+</div> <!-- closes product-grid -->
+</section> <!-- closes #shop -->
+
+<footer class="site-footer reveal">
+
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3>ZORIX STYLE</h3>
+      <p>Streetwear for the bold.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://wa.me/918512041984" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="mailto:support@ZORIXclothing.in">
+        <i class="fas fa-envelope"></i> Email Us
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    
+<p>© 2025 ZORIX STYLE. Made with ❤️ in India.</p>
+  </div>
+</footer>
+
+<!-- ✅ Premium Product Detail Modal -->
+<div class="product-modal" id="productModal">
+  <div class="modal-box">
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <div class="modal-content">
+      <div class="modal-left">
+        <img id="modalImage" src="" alt="Product Image" />
+      </div>
+
+      <div class="modal-right">
+        <h2 id="modalTitle">Product Name</h2>
+        <p class="modal-price" id="modalPrice">₹000</p>
+        <p class="modal-desc" id="modalDescription">Product description here...</p>
+
+        <select id="modalSizeSelect" required>
+  <option value="">Select Size</option>
+  <option value="M">Medium (M)</option>
+  <option value="L">Large (L)</option>
+  <option value="XL">Extra Large (XL)</option>
+  <option value="XXL">XXL</option>
+</select>
+
+<button onclick="addToCartFromModal()">Add to Cart</button>
+<button class="whatsapp-btn" onclick="openSingleProductOrderModal()">Order on WhatsApp</button>
+      </div>
+    </div>
+
+    <div class="modal-reviews">
+      <h3>Customer Reviews</h3>
+      <div id="reviewsList"></div>
+
+      <form onsubmit="submitReview(event)">
+        <input type="text" id="reviewerName" placeholder="Your Name" required />
+        <select id="reviewerRating" required>
+          <option value="">Rating</option>
+          <option value="⭐️⭐️⭐️⭐️⭐️">5 Stars</option>
+          <option value="⭐️⭐️⭐️⭐️">4 Stars</option>
+          <option value="⭐️⭐️⭐️">3 Stars</option>
+        </select>
+        <textarea id="reviewerComment" placeholder="Your review..." required></textarea>
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- ✅ Slide-In Cart Panel -->
+<div id="cartPanel" class="cart-panel">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+    <button onclick="toggleCart()" class="close-cart-btn">×</button>
+  </div>
+
+  <!-- ✅ Cart Items go here -->
+  <div id="cartItems" class="cart-items"></div>
+
+  <!-- ✅ Cart Footer -->
+  <div class="cart-footer">
+    <p><strong>Total: ₹<span id="cartTotal">0</span></strong></p>
+    <button onclick="emptyCart()" class="empty-cart-btn">Empty Cart</button>
+    <button class="checkout-btn" onclick="openOrderModal()">Order on WhatsApp</button>
+  </div>
+</div>
+
+<!-- ✅ Cart Overlay (Background Blur) -->
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+<script src="script.js"></script>
+
+<!-- Order Info Modal -->
+<!-- ✅ FIXED Order Info Modal with Submit Button -->
+<div id="orderModal" class="order-modal">
+  <div class="order-modal-content">
+    <span class="close-btn" onclick="closeOrderModal()">×</span>
+    <h2>Complete Your Order</h2>
+
+    <textarea id="userAddress" placeholder="Enter your full address..." rows="4" required></textarea>
+
+    <select id="productSize" required>
+      <option value="">Select Size</option>
+      <option value="M">Medium (M)</option>
+      <option value="L">Large (L)</option>
+      <option value="XL">Extra Large (XL)</option>
+      <option value="XXL">XXL</option>
+    </select>
+
+    <select id="paymentMethod" required>
+      <option value="">Select Payment Method</option>
+      <option value="COD">Cash on Delivery</option>
+      <option value="UPI">UPI / Online Payment</option>
+    </select>
+
+    <!-- ✅ Submit Button -->
+    <button onclick="sendFinalOrder()">Send Order on WhatsApp</button>
+  </div>
+</div>
+
+
+
+<!-- ✅ Toast Notification -->
+<div id="toast" class="toast">✅ Order sent successfully on WhatsApp!</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('price-reveal');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.price-tag').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+<div id="cartOverlay" class="cart-overlay"></div>
+
+</body>
+</html>
